@@ -1,0 +1,119 @@
+<html charset="utf-8">
+  <head>
+    <title>David Grindle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+	.reldate {
+		font-size: 0.5em;
+	}
+      td, th {
+	      padding: 8px;
+      }
+
+      ul.socials {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        overflow: hidden;
+      }
+
+      ul.socials > li {
+        float: left;
+        display: block;
+        padding-right: 0.8rem;
+      }
+
+      ul.socials img {
+        color: #ff0000;
+        width: 20px;
+      }
+
+      body {
+          color: #444;
+          padding: 10px 10px;
+          margin: 20px auto;
+          font-size: 1.0rem;
+          max-width: 800px;
+          font-family: sans-serif;
+      }
+      .datatable {
+        font-family: monospace;
+        line-height: 1.15rem;
+        font-size: 1.2rem;
+      }
+      .datatable th {
+        font-family: sans-serif;
+        font-size: 0.8rem;
+        text-align: left;
+        font-weight: bold;
+        padding-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>David Grindle</h1>
+    <ul class="socials">
+        <li><a href="mailto:grindle.david@gmail.com"><img src="img/email.svg" title="email: grindle.david@gmail.com"/></li>
+        <li><a href="http://github.com/umop3plsdn"><img src="img/github.svg" title="my repos"/></a></li>
+        <li><a href="https://bitcoinhackers.org/@umop3plsdn"><img src="img/mastodon.svg" title="fediverse: da5id@bitcoinhackers.org"/></a></li>
+        <li><a href="pgp.txt"><img src="img/key.svg" title="pgp key"/></a></li>
+    </ul>
+
+    <!--
+	<h3>Log</h3>
+	<ul>
+		<li><a href="/log/2021-11-06-airgapped-bitcoin-node-nncp.html">2021-11-06 - Building an airgapped bitcoin node with NNCP</a></li>
+		<li><a href="/log/2021-07-12-protoverse-metaverse-protocol.html">2021-07-12 - protoverse, a metaverse protocol experiment</a></li>
+	</ul>
+    -->
+
+    <h3>Projects</h3>
+
+    <ul>
+	    <li><a href="https://lnlink.app">lnlink: a clightning client for iOS</a></li>
+	    <li><a href="https://damus.io">damus: a twitter-like nostr client for iOS</a></li>
+	    <li><a href="http://git.jb55.com/lnsocket">lnsocket: a minimal C library for connecting to lightning nodes</a></li>
+    </ul>
+
+    Check out some of my other active projects here: <a href="http://git.jb55.com">http://git.jb55.com</a>
+
+    You can contribute to these by sending me patches via <a href="https://git-send-email.io">git-send-email</a>
+
+    <h3>Lightning</h3>
+
+    Open a channel to my lightning node:
+
+    <pre>
+    	03f3c108ccd536b8526841f0a5c58212bb9e6584a1eb493080e7c1cc34f82dad71@24.84.152.187:9735
+    </pre>
+
+    <h3 id="tipjar">Lightning Tip Jar</h3>
+
+    <a href="lightning:lnurl1dp68gurn8ghj7um9dej8xct5wvhxcmmv9uh8wetvdskkkmn0wahz7mrww4excup0df3r2dg3mj444">
+	    <img id="tipjar-offer-qr" class="tipjar-copy" src="tipjar2.png" style="float: left; width: 123px; cursor: pointer" />
+    </a>
+    <a id="qrcode-link" href="lightning:" style="display:none">
+	    <div id="qrcode" class="tipjar-copy" style="display: none; float: left; width: 256px; padding: 20px" >
+	    </div>
+    </a>
+
+    <button style="height: 50px" onclick="click_make_invoice(this)">Request bolt11 invoice</button>
+
+    <p>All donations in either case will show up here!</p>
+
+    <textarea id="offerdata" readonly style="display:none; float: left; width: 200px; height: 200px; border: 0; font-family: monospace">
+	lnurl1dp68gurn8ghj7um9dej8xct5wvhxcmmv9uh8wetvdskkkmn0wahz7mrww4excup0df3r2dg3mj444
+    </textarea>
+
+    <h3 style="clear: left">Donations</h3>
+
+    <div id="tipjar-summary" style="clear: left; width: 100%">
+	    Loading tips...
+    </div>
+
+  </body>
+  <script src="qrcode.min.js" > </script>
+  <script src="lnsocket.js?v=10" > </script>
+  <script src="tipjar.js?v=17" ></script>
+</html>
